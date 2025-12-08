@@ -1,1 +1,20 @@
+/* Di Tailwind v4, ini sudah mencakup base, components, & utilities */
 @import "tailwindcss";
+
+/* Pastikan theme variables ter-inject (opsional di v4, 
+  tapi berguna jika nanti butuh custom theme) 
+*/
+@theme {
+  --font-display: "Great Vibes", cursive;
+  --font-body: "Poppins", sans-serif;
+}
+
+/* Reset Global agar Halaman Full Width */
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Mencegah scroll ke samping */
+}

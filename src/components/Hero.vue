@@ -1,66 +1,60 @@
 <script setup>
-import { useRouter } from 'vue-router'
-import heroImage from '@/assets/logo3.jpg'
+// Pastikan path gambarnya sesuai dengan lokasi file kamu
+import heroImg from '@/assets/hero1.jpg' 
 
-const router = useRouter()
-const goToProduk = () => router.push('/produk')
+const heroImage = heroImg
 </script>
 
 <template>
-  <section class="relative flex items-center justify-start h-[90vh] mt-16">
-
-    <!-- Background Image -->
+  <section class="relative w-full h-[550px] md:h-screen flex items-center justify-center overflow-hidden">
+    
     <img 
       :src="heroImage" 
-      alt="Hero background"
-      class="absolute inset-0 w-full h-full object-cover object-center z-0"
+      alt="Delicious Cake" 
+      class="absolute inset-0 w-full h-full object-cover object-center"
     />
 
-    <!-- Soft Dark Overlay -->
-    <div class="absolute inset-0 bg-black/40 z-10"></div>
+    <div class="absolute inset-0 bg-black/40 md:bg-black/30"></div>
 
-    <!-- Text Content -->
-    <div class="relative z-20 max-w-2xl pl-24">
-
-      <!-- ELEGANT FONT -->
-      <h1 
-        class="text-[#452829] font-bold leading-tight 
-               text-4xl sm:text-5xl md:text-6xl drop-shadow-xl elegant-title"
-      >
-        Experience The Deliciousness  
-        <br />
-        <span class="text-[#452829]">
+    <div class="relative z-10 w-full px-6 md:px-12 lg:px-8 max-w-7xl mx-auto mt-16">
+      
+      <div class="text-center md:text-left max-w-3xl mx-auto md:mx-0">
+        
+        <h1 
+          class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-lg"
+          style="font-family: 'Great Vibes', cursive;"
+        >
+          Experience The 
+          
+          <br class="block md:hidden" />
+          
+          <span class="text-[#F2AFBC]">Deliciousness</span> 
+          
+          <br />
           Of Special Cakes!
-        </span>
-      </h1>
+        </h1>
 
-      <!-- Removed paragraph -->
+        <p class="mt-4 md:mt-6 text-base md:text-lg text-gray-100 font-light leading-relaxed drop-shadow-md max-w-xl mx-auto md:mx-0">
+          Handmade cakes with premium taste, crafted with love to celebrate your sweetest moments.
+        </p>
 
-      <!-- BUTTON: updated color palette -->
-      <button
-        @click="goToProduk"
-        class="mt-10 bg-[#DEB6AB] text-white font-semibold
-               px-10 py-4 rounded-full shadow-md 
-               transition-all duration-300
-               hover:bg-[#B58E64] hover:text-white active:scale-95"
-      >
-        Order Now
-      </button>
+        <div class="mt-8 flex justify-center md:justify-start">
+          <router-link
+            to="/product"
+            class="px-8 py-3 bg-[#9E182B] text-white font-semibold rounded-full shadow-lg hover:bg-[#F2AFBC] hover:text-[#9E182B] transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Order Now
+          </router-link>
+        </div>
 
+      </div>
     </div>
-
   </section>
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap');
-
+/* Pastikan font Great Vibes sudah diimport di index.html atau global css */
 section {
   font-family: 'Poppins', sans-serif;
-}
-
-/* FONT TITLE ELEGANT */
-.elegant-title {
-  font-family: 'Playfair Display', serif !important;
 }
 </style>

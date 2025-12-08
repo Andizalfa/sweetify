@@ -1,6 +1,10 @@
-import {createWebHistory, createRouter} from 'vue-router';
+import { createWebHistory, createRouter } from 'vue-router';
+
 import Home from '@/components/Home.vue';
-import Contact from '@/components/Contact.vue'; 
+import About from '@/components/About.vue';
+import Products from '@/components/Products.vue';
+import Contact from '@/components/Contact.vue';
+import Cart from '@/components/Cart.vue';
 
 const routes = [
     {
@@ -8,12 +12,27 @@ const routes = [
         name: 'Home',
         component: Home
     },
-    { 
+    {
+        path: '/about',
+        name: 'About',
+        component: About
+    },
+    {
+        path: '/product',
+        name: 'Product',
+        component: Products
+    },
+    {
         path: '/contact',
         name: 'Contact',
         component: Contact
+    },
+    {
+        path: '/cart',
+        name: 'Cart',
+        component: Cart
     }
-]
+];
 
 const router = createRouter({
     history: createWebHistory(),
