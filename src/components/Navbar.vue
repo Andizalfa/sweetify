@@ -9,6 +9,7 @@ const open = ref(false)
 const menus = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Aboutme", href: "/aboutme"},
   { name: "Products", href: "/product" },
   { name: "Contact", href: "/contact" },
   { name: "Cart", href: "/cart", icon: "cart" },

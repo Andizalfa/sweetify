@@ -5,6 +5,7 @@ import About from '@/components/About.vue';
 import Products from '@/components/Products.vue';
 import Contact from '@/components/Contact.vue';
 import Cart from '@/components/Cart.vue';
+import Aboutme from '@/components/Aboutme.vue';
 
 const routes = [
     {
@@ -16,6 +17,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/about me',
+        name: 'Aboutme',
+        component: Aboutme
     },
     {
         path: '/product',
@@ -35,7 +41,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(),
     routes
 });
 
